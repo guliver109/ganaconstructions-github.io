@@ -740,7 +740,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding-top: 10px;
 }
 .our_feature_area .feature_row .feature_img img {
-  max-width: 80%;
+  max-width: 65%;
 }
 .our_feature_area .feature_row .feature_content .subtittle {
   padding-bottom: 40px;
