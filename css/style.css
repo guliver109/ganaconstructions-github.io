@@ -1051,7 +1051,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   content: "";
   position: absolute;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #d8ab4e;
   left: 0;
   right: 0;
   bottom: 0;
@@ -1679,9 +1679,9 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding-top: 95px;
   padding-bottom: 50px;
 }
-.footer_area .footer_row .footer_about {
+/* .footer_area .footer_row .footer_about {
   padding-bottom: 50px;
-}
+} */
 .footer_area .footer_row .footer_about h2 {
   font: 400 18px "Oswald", sans-serif;
   text-transform: uppercase;
@@ -1692,7 +1692,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   max-width: 100%;
 }
 .footer_area .footer_row .footer_about p {
-  font: 400 14px/26px "Oswald", sans-serif;
+  font: 400 14px/26px "Roboto", sans-serif;
   color: #fefefe;
   /*padding-top: 22px; */
 }
