@@ -189,3 +189,6 @@ var Modal = (function() {
   }());
   
   Modal.init();
+
+  // opsirnije modal
+  

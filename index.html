@@ -32,10 +32,11 @@
 	<!-- Top Header_Area -->
 	<section class="top_header_area">
 	    <div class="container">
+                <a id = "toTopButton"></a>
             <ul class="nav navbar-nav top_nav">
-                <li><a href="#"><i class="fa fa-phone"></i>+1 (168) 314 5016</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i>info@thethemspro.com</a></li>
-                <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 08:00 - 20:00</a></li>
+                <li><a href="tel:+381646849616"><i class="fa fa-phone"></i>+381 (64) 684 9616</a></li>
+                <li><a href="mailto:gusic.ana@gmail.com"><i class="fa fa-envelope-o"></i>gusic.ana@gmail.com</a></li>
+                <li><a href="#"><i class="fa fa-clock-o"></i>Pon - Sub 08:00 - 20:00</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right social_nav">
                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -54,7 +55,7 @@
                 <form action="#" class="row m0">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="search" name="search" class="form-control" placeholder="Please Type and Hit/Ukucaj Rec pa Pritisni Enter">
+                        <input type="search" name="search" class="form-control" placeholder="Ukucaj Rec pa Pritisni Enter">
                         <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
                     </div>
                 </form>
@@ -69,9 +70,6 @@
                     <span class="icon-bar"></span>
                     </button>
                     <a class="pull-left"  href="index.html"><img src="images/buildingLogo2.png" alt="Logo" style="height: 100px; padding: 5px;"></a>
-                    <a class="helmet" style="position: absolute; width: 100%;"  href="index.html"><img src="images/businessLogo.png" alt="Logo" style="height: 100px; padding: 5px;"></a>
-                    <!-- <a class="gana-logo"  style="position:absolute;" href="#">GANA</a> -->
-                    <!-- <a class="navbar-brand" class="gana-logo"  style="position:absolute;" href="#">ZGR</a> -->
                 </div>
             </div>
 
@@ -86,13 +84,13 @@
                             </ul>
                         </li> -->
                         <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">O Nama</a>
+                            <a href="#chapter1">O Nama</a>
                             <!-- <ul class="dropdown-menu other_dropdwn">
                                 <li><a href="about.html">About Us</a></li>
                             </ul> -->
                         </li>
                         <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usluge</a>
+                            <a href="#chapter2">Usluge</a>
                             <!-- <ul class="dropdown-menu other_dropdwn">
                                 <li><a href="services.html">Services</a></li>
                             </ul> -->
@@ -105,7 +103,7 @@
                             </ul> -->
                         </li>
                         <li class="dropdown submenu">
-                            <a href="contact.html" class="dropdown-toggle" data-toggle="dropdown">Kontakt</a>
+                            <a href="mailto:gusic.ana@gmail.com">Kontakt</a>
                             <!-- <ul class="dropdown-menu other_dropdwn">
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul> -->
@@ -126,7 +124,7 @@
                         <h5 class=" wow fadeInUp animated">Dobrodosli</h5>
                         <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN, MODERN, MULTIPURPOSE THEME</h3>
                         <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you turn your dream into a reality fast. The Love Boat promises something for everyone. Now the world don't move to the beat of just one</p>
-                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href="#">Opsirnije/More</a>
+                        <a class=" wow fadeInUp animated" data-wow-delay="1s" class ="open" href="#">Opsirnije</a>
                    </div>
                 </div>
             </div>
@@ -174,9 +172,10 @@
     </section>
     <!-- End Slider area -->
     
-    <!-- What ew offer Area -->
+    <!-- What we offer Area -->
     <section class="what_we_area row">
         <div class="container">
+                <a id = "chapter2"></a>
             <div class="tittle wow fadeInUp">
                 <h2>NASE USLUGE</h2>
                 <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
@@ -220,6 +219,7 @@
     <!-- About Us Area -->
     <section class="about_us_area row">
         <div class="container">
+                <a id = "chapter1"></a>
             <div class="tittle wow fadeInUp">
                 <h2>O Nama/ABOUT US</h2>
                 <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
@@ -230,7 +230,7 @@
                         <h2>KO SMO MI/<br>WHO WE ARE</h2>
                     </div>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                    <a href="#" class="button_all">Kontakt/Contact</a>
+                    <a href="mailto:gusic.ana@gmail.com" class="button_all">Kontakt</a>
                 </div>
                 <div class="col-md-5 col-sm-6 about_client">
                     <img src="images/tools.jpg" alt="">
@@ -455,62 +455,162 @@
 
         <!-- Galerija Modal -->
         <div class="mpo-modal">
-            <input type="checkbox" id="mpo-modal-controller" class="mpo-modal-open" hidden>
+                <input type="checkbox" id="mpo-modal-controller" class="mpo-modal-open" hidden>
                 <div class="mpo-modal-wrap">
                   <label for="mpo-modal-controller" class="mpo-modal-overlay"></label>
-            <div class="mpo-modal-body">
-                <label for="mpo-modal-controller" class="mpo-modal-close">&times;</label>
+                  <div class="mpo-modal-body">
+              
+                    <label for="mpo-modal-controller" class="mpo-modal-close">&times;</label>
+              
                     <input type="radio" name="content-nav" id="modal-content-1" class="modal-radio" checked hidden/>
                     <input type="radio" name="content-nav" id="modal-content-2" class="modal-radio" hidden/>
                     <input type="radio" name="content-nav" id="modal-content-3" class="modal-radio" hidden/>
-                
-                <div class="mpo-modal-slide content-1">
-                    <div class="mpo-modal-content">
-                        <h2>Slide 1: Renovacija</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <div class ="modalGaleryPictures">
-                            <p><img src="images/gallery/renovationChair.jpg" alt="" style="padding-bottom: 10px;"/></p>
-                            <p><img src="images/gallery/renovationDinning.jpg" alt="" style="padding-bottom: 10px;"/></p>
-                            <p><img src="images/gallery/renovationDoor.jpg" alt="" style="padding-bottom: 10px;"/></p>
-                            <p><img src="images/gallery/renovationLivingRoom.jpg" alt=""/></p>
-                        </div>
-                        <div class="mpo-modal-nav">
-                          <label for="modal-content-2" class="next-slide">&#8250;&#8250;</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="mpo-modal-slide content-2">
-                    <div class="mpo-modal-content">
-                        <h2>Slide 2: New</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p><img src="images/gallery/renovationTV.jpg" alt="" style="padding-bottom: 10px;" /></p>
-                        <p><img src="images/gallery/renovationYellow.jpg" alt="" style="padding-bottom: 10px;"/></p>
-                        <div class="mpo-modal-nav">
-                          <label for="modal-content-1" class="prev-slide">&#8249;&#8249;</label>
-                          <label for="modal-content-3" class="next-slide">&#8250;&#8250;</label>
+                    <input type="radio" name="content-nav" id="modal-content-4" class="modal-radio" hidden/>
+                    <input type="radio" name="content-nav" id="modal-content-5" class="modal-radio" hidden/>
+                    <input type="radio" name="content-nav" id="modal-content-6" class="modal-radio" hidden/>
+                    <input type="radio" name="content-nav" id="modal-content-7" class="modal-radio" hidden/>
+                    <input type="radio" name="content-nav" id="modal-content-8" class="modal-radio" hidden/>
+                    <input type="radio" name="content-nav" id="modal-content-9" class="modal-radio" hidden/>
+                    <input type="radio" name="content-nav" id="modal-content-10" class="modal-radio" hidden/>
+                              
+              
+                    <div class="mpo-modal-slide content-1">
+                      <div class="mpo-modal-content">
+                            <h2>Galerija</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/renovationChair.jpg" alt="" style="padding-bottom: 10px;"/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-2" class="next-slide">&#8250;&#8250;</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mpo-modal-slide content-3">
-                    <div class="mpo-modal-content">
-                        <h2>Slide 3: Ne znam Sta?</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <div class="mpo-modal-nav">
-                          <label for="modal-content-2" class="prev-slide">&#8249;&#8249;</a>
+              
+                    <div class="mpo-modal-slide content-2">
+                        <div class="mpo-modal-content">
+                            <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/renovationDinning.jpg" alt="" style="padding-bottom: 10px;"/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-1" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-3" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+              
+                    <div class="mpo-modal-slide content-3">
+                        <div class="mpo-modal-content">
+                            <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/renovationTV.jpg" alt="" style="padding-bottom: 10px;" /></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-2" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-4" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mpo-modal-slide content-4">
+                        <div class="mpo-modal-content">
+                                <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/renovationYellow.jpg" alt="" style="padding-bottom: 10px;"/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-3" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-5" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+              
+                    <div class="mpo-modal-slide content-5">
+                        <div class="mpo-modal-content">
+                            <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/renovationDinning.jpg" alt="" style="padding-bottom: 10px;"/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-4" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-6" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="mpo-modal-slide content-6">
+                        <div class="mpo-modal-content">
+                                <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/renovationDoor.jpg" alt="" style="padding-bottom: 10px;"/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-5" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-7" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="mpo-modal-slide content-7">
+                        <div class="mpo-modal-content">
+                            <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                              <p><img src="images/gallery/renovationLivingRoom.jpg" alt=""/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                              <label for="modal-content-6" class="prev-slide">&#8249;&#8249;</label>
+                              <label for="modal-content-8" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mpo-modal-slide content-8">
+                        <div class="mpo-modal-content">
+                                <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/window.jpg" alt=""/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-7" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-9" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mpo-modal-slide content-9">
+                        <div class="mpo-modal-content">
+                                <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/roundRoom.jpeg" alt=""/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-8" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-10" class="next-slide">&#8250;&#8250;</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mpo-modal-slide content-10">
+                        <div class="mpo-modal-content">
+                                <h2>Galerija:</h2>
+                            <div class ="modalGaleryPictures">
+                                <p><img src="images/gallery/wholeRoundRoom.jpeg" alt=""/></p>
+                            </div>
+                            <div class="mpo-modal-nav">
+                                <label for="modal-content-9" class="prev-slide">&#8249;&#8249;</label>
+                                <label for="modal-content-11" class="next-slide">&#8250;&#8250;</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Opsirnije Modal -->
+        <div class="modals">
+                <div class="modal-content">
+                  <div class="modal-wrap">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ab officiis libero reiciendis voluptas hic quas sit aspernatur exercitationem numquam obcaecati dolore sed voluptates, at aliquam cum harum, necessitatibus, expedita quod et magni? Possimus maiores vero suscipit ipsum veritatis, omnis pariatur magnam voluptatibus quisquam sequi veniam quas, et, dignissimos perspiciatis.</p>
+                    <button class="close">Close</button>
+                  </div>
+                </div>
+              </div>
 
     <!-- jQuery JS -->
     <script src="js/jquery-1.12.0.min.js"></script>

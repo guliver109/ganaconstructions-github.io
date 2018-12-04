@@ -184,7 +184,24 @@
                 $('body').delay(500).css({'overflow':'visible'});
             });
         } 
-    }; 
+    };
+
+    //scroll on top button
+	var btn = $("#toTopButton");
+	
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > 300) {
+			btn.addClass("show");
+		} else {
+			btn.removeClass("show");
+		}
+	});
+
+	btn.on("click", function(e) {
+		e.preventDefault();
+		$("html, body").animate({scrollTop:0}, "300");
+	})
+    
     
     /*Function Calls*/ 
     searchFrom ();
