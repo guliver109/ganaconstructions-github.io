@@ -716,7 +716,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .what_we_area .construction_iner .construction .cns-content a {
   font: 700 18px "Roboto", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #222222;
   padding-top: 17px;
   display: block;
@@ -811,7 +811,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding: 0;
 }
 .our_services_area .portfolio_inner_area .portfolio_filter ul li a {
-  font: 400 14px "Oswald", sans-serif;
+  font: 400 14px "Roboto", sans-serif;
   text-transform: uppercase;
   color: #f5f5f5;
 }
@@ -2024,6 +2024,12 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   .header_aera .navbar-collapse .navbar-nav.navbar-right li a {
     line-height: 45px;
   }
+  .btn {
+    line-height: 45px;
+  }
+  .buttonGalery {
+    height: 80px;
+  }
 
   .header_aera .navbar-collapse .navbar-nav.navbar-right li.submenu ul {
     padding-left: 30px;
@@ -2909,8 +2915,8 @@ body {
 }
 .mpo-modal-nav label {
   position: absolute;
-  background: #f7f7f7;
-  color: #303030;
+  /* background: #f7f7f7; */
+  color: #d8ab4e;
   cursor: pointer;
   display: inline-block;
   font: 50px Arial;
@@ -2947,7 +2953,7 @@ body {
   color: #222222;
   text-transform: uppercase;
   padding: 0;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 @media only screen and (max-width: 767px) {
   .mpo-modal-body {
@@ -2956,7 +2962,81 @@ body {
     border-radius: 0;
   }
 }
-/* opsirnije modal */
+/* kontakt modal */
+#contact { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+      /* margin: 4em auto; */
+      width: 120px;
+      height: 40px;
+      line-height: 30px;
+      /* background: teal; */
+      color: #d8ab4e;
+      font-weight: 900;
+      text-align: center;
+      cursor: pointer;
+      /* border: 1px solid white; */
+      background: #4d443d;
+      padding-top: 5px;
+      font-size: 18px;
+}
+
+#contact:hover { background: #666; }
+#contact:active { background: #444; }
+
+.closeModal {
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 100;
+  color: #4d443d;
+  background-color: #d8ab4e;
+  border: 0px;
+}
+
+#contactForm { 
+  display: none;
+
+  border: 6px solid #4d443d;
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background: #d8ab4e;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+ 
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  background: #4d443d;
+  color: #d8ab4e;
+  font-weight: 900;
+  font-size: 1.3em;
+  border: none;
+}
 
 
 

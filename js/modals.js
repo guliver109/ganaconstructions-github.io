@@ -4,7 +4,7 @@ var Modal = (function() {
     var modals = $qsa('.modal'); // the entire modal (takes up entire window)
     var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
     var content = $qsa('.modal__content'); // the inner content of the modal
-      var closers = $qsa('.modal__close'); // an element used to close the modal
+    var closers = $qsa('.modal__close'); // an element used to close the modal
     var w = window;
     var isOpen = false;
       var contentDelay = 400; // duration after you click the button and wait for the content to show
@@ -190,5 +190,33 @@ var Modal = (function() {
   
   Modal.init();
 
-  // opsirnije modal
+  // kontakt modal
+  $(function() {
   
+    // contact form animations
+    $('#contact').click(function() {
+      $('#contactForm').fadeToggle();
+      // $('.contactForm-close').fadeOut();
+    })
+    $(document).mouseup(function (e) {
+      var container = $("#contactForm");
+      var closeContainer = $('.closeModal')
+  
+      if (!container.is(e.target) // if the target of the click isn't the container...
+          && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+          container.fadeOut();
+      }
+      if (closeContainer.is(e.target)){
+        
+        container.fadeToggle();
+      }
+    });
+
+  //   $(function () {
+  //     $('.close').fadeOut()
+  //  });
+
+    // $('.contactForm-close').fadeOut();
+    
+  });

@@ -97,7 +97,9 @@
                         </li>
                         <li class="dropdown submenu">
                             <!-- <a for="mpo-modal-controller" class="btn">Galerija</a> -->
-                            <label for="mpo-modal-controller" class="btn">Galerija</label>
+                            <div class = "buttonGalery">
+                                <label for="mpo-modal-controller" class="btn">Galerija</label>
+                            </div>
                             <!-- <ul class="dropdown-menu other_dropdwn">
                                 <li><a href="services.html">Gallery</a></li>
                             </ul> -->
@@ -192,7 +194,7 @@
                     </div>
                     <div class="cns-content">
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        <a href=""data-modal="#modal" class="modal__trigger">IZGRADNJA</a>
+                        <a href="" data-modal="#modal" class="modal__trigger">Izgradnja</a>
                         <p>Posedujemo stručan kadar, sopstvenu opremu i mehanizaciju koja je potrebna za izvođenje i najzahtevnijih radova u građevinskoj industriji.</p>
                     </div>
                 </div>
@@ -202,7 +204,7 @@
                     </div>
                     <div class="cns-content">
                         <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-                        <a href=""data-modal="#modal2" class="modal__trigger">Projektovanje/Veštačenje</a>
+                        <a href="" data-modal="#modal2" class="modal__trigger">Projektovanje/Veštačenje</a>
                         <p>Upravljanje projektima olakšava izvođenje celokupnog projekta kroz planiranje, nadzor i koordinaciju svih aktivnosti, resusrsa i troškova. </p>
                     </div>
                 </div>
@@ -243,7 +245,8 @@
                         <br>Šifra delatnosti: 4120- Izgradnja stambenih I nestambenih zgrada
                         <br>Matični broj: 62242515
                         <br>Žiro račun: 160-341687-14, Banca Intesa</p>
-                    <a href="mailto:gusic.ana@gmail.com" class="button_all">Kontakt</a>
+                    <!-- <a href="mailto:gusic.ana@gmail.com" class="button_all">Kontakt</a> -->
+                    <div id="contact">Kontakt</div>
                 </div>
                 <div class="col-md-5 col-sm-6 about_client">
                     <img src="images/tools.jpg" alt="">
@@ -288,7 +291,7 @@
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="#">KVALIFIKOVANI STRUČNJACI</a>
+                            <a href="#">KVALIFIKOVANI STRUČgit NJACI</a>
                             <p>Posedujemo stručan kadar, sopstvenu opremu a odrzavamo i izuzetan odnos sa poslovnim partnerima i saradnicima.</p>
                         </div>
                     </div>
@@ -608,14 +611,30 @@
                             </div>
                             <div class="mpo-modal-nav">
                                 <label for="modal-content-9" class="prev-slide">&#8249;&#8249;</label>
-                                <label for="modal-content-11" class="next-slide">&#8250;&#8250;</a>
+                                <!-- <label for="modal-content-11" class="next-slide">&#8250;&#8250;</a> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Kontakt Modal -->
+        <div id="contactForm">
+                <button type="button" class="closeModal" data-dismiss="contactForm" aria-hidden="true">&times;</button>
+            <!-- <label for="contactForm" class="contactForm-close">&times;</label> -->
 
+            <h3>KONTAKTIRAJTE NAS!</h3>
+            <p>U slučaju da imate bilo kakvo pitanje, komentar ili samo želite da nas pozdravite:</p>
+            
+            <form action="mailto:gusic.ana@gmail.com">
+              <input placeholder="Ime" type="text" required />
+              <input placeholder="Email" type="email" required />
+              <input placeholder="Naslov" type="text" required />
+              <textarea placeholder="Komentar"></textarea>
+              <input class="formBtn" type="submit" />
+              <input class="formBtn" type="reset" />
+            </form>
+          </div>
     <!-- jQuery JS -->
     <script src="js/jquery-1.12.0.min.js"></script>
         <!-- jQuery For Modals -->
