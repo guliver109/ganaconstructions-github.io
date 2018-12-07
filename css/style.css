@@ -441,20 +441,29 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   text-shadow: none;
   left: 0;
 }
+.slider_area .slider_inner .camera_caption div h2 {
+  color: #d8ab4e;
+  font: 35px "Roboto", sans-serif;
+  font-weight: bold;
+  text-shadow: #777 0px 0px 10px;
+}
 .slider_area .slider_inner .camera_caption div h5 {
   color: #d8ab4e;
   font: 30px "Roboto", sans-serif;
   font-weight: bold;
+  text-shadow: #777 0px 0px 10px;
 }
 .slider_area .slider_inner .camera_caption div h3 {
   color: #222222;
   font: 400 30px "Roboto", sans-serif;
   padding-top: 27px;
+  text-shadow: #777 0px 0px 10px;
 }
 .slider_area .slider_inner .camera_caption div h4 {
   color: #222222;
   font: 400 25px "Roboto", sans-serif;
   padding-top: 27px;
+  text-shadow: #777 0px 0px 10px;
 }
 .slider_area .slider_inner .camera_caption div p {
   padding-top: 60px;
@@ -464,10 +473,12 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   margin: 0 auto;
   padding-bottom: 90px;
   font-weight: bold;
+  text-shadow: #777 0px 0px 10px;
 }
 .slider_area .slider_inner .camera_caption div a {
   font: 700 18px/59px "Roboto", sans-serif;
-  width: 180px;
+  width: 120px;
+  height: 50px;
   text-align: center;
   background: #d8ab4e;
   display: block;
@@ -480,6 +491,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   position: relative;
   z-index: 2;
   padding: 0;
+  margin-top: 40px;
 }
 .slider_area .slider_inner .camera_caption div a:before {
   content: "";
@@ -594,31 +606,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 
 /* End Banner Area */
 /*--------------------------------------------------*/
-/* .professional_builder {
-  background: #f5f5f5;
-  padding-top: 80px;
-  padding-bottom: 50px;
-}
-.professional_builder .builder_all .builder {
-  text-align: center;
-  padding-bottom: 25px;
-}
-.professional_builder .builder_all .builder i {
-  font-size: 48px;
-  color: #f6b60b;
-  padding-bottom: 35px;
-}
-.professional_builder .builder_all .builder h4 {
-  font: 700 18px "Roboto", sans-serif;
-  color: #222222;
-  padding-bottom: 20px;
-}
-.professional_builder .builder_all .builder p {
-  font: 400 14px/26px "Roboto", sans-serif;
-  color: #555555;
-} */
 
-/*--------------------------------------------------*/
 /* about_us_area */
 .about_us_area {
   background: #fefefe;
@@ -2687,6 +2675,12 @@ body {
 .modal-content-10 {
   left: 900%;
 }
+.modal-content-11 {
+  left: 1000%;
+}
+.modal-content-12 {
+  left: 1100%;
+}
 
 #modal-content-1:checked ~ .content-1 {
   left: 0;
@@ -2907,6 +2901,85 @@ body {
   overflow: auto;
   position: relative;
 }
+#modal-content-10:checked ~ .content-11 {
+  left: 100%;
+}
+#modal-content-11:checked ~ .content-1 {
+  left: -1000%;
+}
+#modal-content-11:checked ~ .content-2 {
+  left: -900%;
+}
+#modal-content-11:checked ~ .content-3 {
+  left: -800%;
+}
+#modal-content-11:checked ~ .content-4 {
+  left: -700%;
+}
+#modal-content-11:checked ~ .content-5 {
+  left: -600%;
+}
+#modal-content-11:checked ~ .content-6 {
+  left: -500%;
+}
+#modal-content-11:checked ~ .content-7 {
+  left: -400%;
+}
+#modal-content-11:checked ~ .content-8 {
+  left: -300%;
+}
+#modal-content-11:checked ~ .content-9 {
+  left: -200%;
+}
+#modal-content-11:checked ~ .content-10 {
+  left: -100;
+}
+#modal-content-11:checked ~ .content-11 {
+  left: 0;
+  overflow: auto;
+  position: relative;
+}
+#modal-content-11:checked ~ .content-12 {
+  left: 100%;
+}
+#modal-content-12:checked ~ .content-1 {
+  left: -1100%;
+}
+#modal-content-12:checked ~ .content-2 {
+  left: -1000%;
+}
+#modal-content-12:checked ~ .content-3 {
+  left: -900%;
+}
+#modal-content-12:checked ~ .content-4 {
+  left: -800%;
+}
+#modal-content-12:checked ~ .content-5 {
+  left: -700%;
+}
+#modal-content-12:checked ~ .content-6 {
+  left: -600%;
+}
+#modal-content-12:checked ~ .content-7 {
+  left: -500%;
+}
+#modal-content-12:checked ~ .content-8 {
+  left: -400%;
+}
+#modal-content-12:checked ~ .content-9 {
+  left: -300%;
+}
+#modal-content-12:checked ~ .content-10 {
+  left: -200%;
+}
+#modal-content-12:checked ~ .content-11 {
+  left: -100%;
+}
+#modal-content-12:checked ~ .content-12 {
+  left: 0;
+  overflow: auto;
+  position: relative;
+}
 
 .mpo-modal-nav {
   position: absolute;
@@ -2954,6 +3027,9 @@ body {
   text-transform: uppercase;
   padding: 0;
   padding-left: 20px;
+}
+.btn:hover {
+  color: #d8ab4e;
 }
 @media only screen and (max-width: 767px) {
   .mpo-modal-body {
@@ -3037,6 +3113,62 @@ textarea { height: 80px; resize: none; }
   font-size: 1.3em;
   border: none;
 }
+/* Opsirnije Modal */
+/* button {
+  cursor: pointer;
+  padding: 0 6px;
+  min-width: 88px;
+  min-height: 36px;
+}
 
+.controls {
+  padding: 24px;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0,0,0,0.15);  
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-dialog {
+  width: 70vmin;
+  height: 70vmin;  
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-polygon {
+  fill: #ab47bc;
+}
+
+.modal-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 24px;  
+  visibility: hidden;
+  opacity: 0;  
+  color: rgba(255,255,255,0.87);
+}
+ */
 
 
