@@ -3061,7 +3061,7 @@ body {
 #contact:hover { background: #666; }
 #contact:active { background: #444; }
 
-.closeModal {
+.closeModal-btn {
   cursor: pointer;
   font-size: 35px;
   font-weight: bold;
@@ -3115,13 +3115,13 @@ textarea { height: 80px; resize: none; }
 }
 /* Opsirnije Modal */
 button {
-  cursor: pointer;
+  /* cursor: pointer;
   padding: 0;
   min-width: 120px;
   min-height: 50px;
   background: #d8ab4e;
   color: #222222;
-  font: 700 18px/59px "Roboto", sans-serif;
+  font: 700 18px/59px "Roboto", sans-serif; */
   /* font: 700 18px/59px "Roboto", sans-serif;
   width: 120px;
   height: 50px;
@@ -3140,16 +3140,30 @@ button {
   margin-top: 40px; */
 }
 
-.controls {
+/* .controls {
   padding: 24px;
+} */
+.open {
+      /* margin: 4em auto; */
+      width: 120px;
+      height: 40px;
+      line-height: 30px;
+      /* background: teal; */
+      color:#4d443d;
+      font-weight: 900;
+      text-align: center;
+      cursor: pointer;
+      /* border: 1px solid white; */
+      background:#d8ab4e;
+      padding-top: 5px;
+      font-size: 18px;
 }
-
 .modal-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: 250%;
   left: 0;
   z-index: 1;
   width: 100%;
