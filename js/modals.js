@@ -1,10 +1,10 @@
 var Modal = (function() {
 
-    var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
-    var modals = $qsa('.modal'); // the entire modal (takes up entire window)
-    var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
-    var content = $qsa('.modal__content'); // the inner content of the modal
-    var closers = $qsa('.modal__close'); // an element used to close the modal
+    var trigger = $qsa(".modal__trigger"); // what you click to activate the modal
+    var modals = $qsa(".modal"); // the entire modal (takes up entire window)
+    var modalsbg = $qsa(".modal__bg"); // the entire modal (takes up entire window)
+    var content = $qsa(".modal__content"); // the inner content of the modal
+    var closers = $qsa(".modal__close"); // an element used to close the modal
     var w = window;
     var isOpen = false;
       var contentDelay = 400; // duration after you click the button and wait for the content to show
@@ -22,7 +22,7 @@ var Modal = (function() {
       // get the value of the data-modal attribute from the button
       var modalId = self.dataset.modal;
       var len = modalId.length;
-      // remove the '#' from the string
+      // remove the "#" from the string
       var modalIdTrimmed = modalId.substring(1, len);
       // select the modal we want to activate
       var modal = document.getElementById(modalIdTrimmed);
@@ -32,16 +32,16 @@ var Modal = (function() {
   
     var makeDiv = function(self, modal) {
   
-      var fakediv = document.getElementById('modal__temp');
+      var fakediv = document.getElementById("modal__temp");
   
       /**
-       * if there isn't a 'fakediv', create one and append it to the button that was
-       * clicked. after that execute the function 'moveTrig' which handles the animations.
+       * if there isn"t a "fakediv", create one and append it to the button that was
+       * clicked. after that execute the function "moveTrig" which handles the animations.
        */
   
       if (fakediv === null) {
-        var div = document.createElement('div');
-        div.id = 'modal__temp';
+        var div = document.createElement("div");
+        div.id = "modal__temp";
         self.appendChild(div);
         moveTrig(self, modal, div);
       }
@@ -50,13 +50,13 @@ var Modal = (function() {
     var moveTrig = function(trig, modal, div) {
       var trigProps = trig.getBoundingClientRect();
       var m = modal;
-      var mProps = m.querySelector('.modal__content').getBoundingClientRect();
+      var mProps = m.querySelector(".modal__content").getBoundingClientRect();
       var transX, transY, scaleX, scaleY;
       var xc = w.innerWidth / 2;
       var yc = w.innerHeight / 2;
   
       // this class increases z-index value so the button goes overtop the other buttons
-      trig.classList.add('modal__trigger--active');
+      trig.classList.add("modal__trigger--active");
   
       // these values are used for scale the temporary div to the same size as the modal
       scaleX = mProps.width / trigProps.width;
@@ -71,17 +71,17 @@ var Modal = (function() {
       transY = Math.round(yc - trigProps.top - trigProps.height / 2);
   
           // if the modal is aligned to the top then move the button to the center-y of the modal instead of the window
-      if (m.classList.contains('modal--align-top')) {
+      if (m.classList.contains("modal--align-top")) {
         transY = Math.round(mProps.height / 2 + mProps.top - trigProps.top - trigProps.height / 2);
       }
   
   
           // translate button to center of screen
-          trig.style.transform = 'translate(' + transX + 'px, ' + transY + 'px)';
-          trig.style.webkitTransform = 'translate(' + transX + 'px, ' + transY + 'px)';
+          trig.style.transform = "translate(" + transX + "px, " + transY + "px)";
+          trig.style.webkitTransform = "translate(" + transX + "px, " + transY + "px)";
           // expand temporary div to the same size as the modal
-          div.style.transform = 'scale(' + scaleX + ',' + scaleY + ')';
-          div.style.webkitTransform = 'scale(' + scaleX + ',' + scaleY + ')';
+          div.style.transform = "scale(" + scaleX + "," + scaleY + ")";
+          div.style.webkitTransform = "scale(" + scaleX + "," + scaleY + ")";
   
   
           window.setTimeout(function() {
@@ -96,27 +96,27 @@ var Modal = (function() {
   
       if (!isOpen) {
         // select the content inside the modal
-        var content = m.querySelector('.modal__content');
+        var content = m.querySelector(".modal__content");
         // reveal the modal
-        m.classList.add('modal--active');
+        m.classList.add("modal--active");
         // reveal the modal content
-        content.classList.add('modal__content--active');
+        content.classList.add("modal__content--active");
   
         /**
          * when the modal content is finished transitioning, fadeout the temporary
-         * expanding div so when the window resizes it isn't visible ( it doesn't
+         * expanding div so when the window resizes it isn"t visible ( it doesn"t
          * move with the window).
          */
   
-        content.addEventListener('transitionend', hideDiv, false);
+        content.addEventListener("transitionend", hideDiv, false);
   
         isOpen = true;
       }
   
       function hideDiv() {
-        // fadeout div so that it can't be seen when the window is resized
-        div.style.opacity = '0';
-        content.removeEventListener('transitionend', hideDiv, false);
+        // fadeout div so that it can"t be seen when the window is resized
+        div.style.opacity = "0";
+        content.removeEventListener("transitionend", hideDiv, false);
       }
     };
   
@@ -126,18 +126,18 @@ var Modal = (function() {
       event.stopImmediatePropagation();
   
       var target = event.target;
-      var div = document.getElementById('modal__temp');
+      var div = document.getElementById("modal__temp");
   
       /**
-       * make sure the modal__bg or modal__close was clicked, we don't want to be able to click
+       * make sure the modal__bg or modal__close was clicked, we don"t want to be able to click
        * inside the modal and have it close.
        */
   
-      if (isOpen && target.classList.contains('modal__bg') || target.classList.contains('modal__close')) {
+      if (isOpen && target.classList.contains("modal__bg") || target.classList.contains("modal__close")) {
   
         // make the hidden div visible again and remove the transforms so it scales back to its original size
-        div.style.opacity = '1';
-        div.removeAttribute('style');
+        div.style.opacity = "1";
+        div.removeAttribute("style");
   
               /**
               * iterate through the modals and modal contents and triggers to remove their active classes.
@@ -145,15 +145,15 @@ var Modal = (function() {
               */
   
               for (var i = 0; i < len; i++) {
-                  modals[i].classList.remove('modal--active');
-                  content[i].classList.remove('modal__content--active');
-                  trigger[i].style.transform = 'none';
-          trigger[i].style.webkitTransform = 'none';
-                  trigger[i].classList.remove('modal__trigger--active');
+                  modals[i].classList.remove("modal--active");
+                  content[i].classList.remove("modal__content--active");
+                  trigger[i].style.transform = "none";
+          trigger[i].style.webkitTransform = "none";
+                  trigger[i].classList.remove("modal__trigger--active");
               }
   
         // when the temporary div is opacity:1 again, we want to remove it from the dom
-              div.addEventListener('transitionend', removeDiv, false);
+              div.addEventListener("transitionend", removeDiv, false);
   
         isOpen = false;
   
@@ -172,9 +172,9 @@ var Modal = (function() {
   
     var bindActions = function() {
       for (var i = 0; i < len; i++) {
-        trigger[i].addEventListener('click', getId, false);
-        closers[i].addEventListener('click', close, false);
-        modalsbg[i].addEventListener('click', close, false);
+        trigger[i].addEventListener("click", getId, false);
+        closers[i].addEventListener("click", close, false);
+        modalsbg[i].addEventListener("click", close, false);
       }
     };
   
@@ -194,15 +194,15 @@ var Modal = (function() {
   $(function() {
   
     // contact form animations
-    $('#contact').click(function() {
-      $('#contactForm').fadeToggle();
-      // $('.contactForm-close').fadeOut();
+    $("#contact").click(function() {
+      $("#contactForm").fadeToggle();
+      // $(".contactForm-close").fadeOut();
     })
     $(document).mouseup(function (e) {
       var container = $("#contactForm");
-      var closeContainer = $('.closeModal')
+      var closeContainer = $(".closeModal")
   
-      if (!container.is(e.target) // if the target of the click isn't the container...
+      if (!container.is(e.target) // if the target of the click isn"t the container...
           && container.has(e.target).length === 0) // ... nor a descendant of the container
       {
           container.fadeOut();
@@ -215,20 +215,20 @@ var Modal = (function() {
   });
 
   // Opsirnije modal
-  console.clear();
+  // console.clear();
 
   var body = document.body;
-  var modal = createModal(document.querySelector('#modal-1'));
-  var openButton = document.querySelector('#open-button');
+  var modal = createModal(document.querySelector("#modal-1"));
+  var openButton = document.querySelector("#open-button");
 
-  openButton.addEventListener('click', function(){
+  openButton.addEventListener("click", function(){
     modal.open();
   });
   function createModal(container){
-    var content = container.querySelector('.modal-content');
-    var dialog = container.querySelector('.modal-dialog');
-    var polygon = container.querySelector('.modal-polygon');
-    var svg = container.querySelector('.modal-svg');
+    var content = container.querySelector(".modal-content");
+    var dialog = container.querySelector(".modal-dialog");
+    var polygon = container.querySelector(".modal-polygon");
+    var svg = container.querySelector(".modal-svg");
 
     var point1 = createPoint(45, 45);
     var point2 = createPoint(55, 45);
@@ -256,18 +256,18 @@ var Modal = (function() {
           ease: Power3.easeIn})
         
         .to(point2, 0.3, {
-          x: 100,
+          x: 300,
           y: 0,
           ease: Power2.easeIn}, "-=0.2")
         
         .to(point3, 0.3, {
-          x:  100,
-          y:  100,
+          x:  300,
+          y:  300,
           ease: Power2.easeIn})
         
         .to(point4, 0.3, {
           x: 0,
-          y: 100,
+          y: 300,
           ease: Power2.easeIn}, "-=0.1")
           
         .to(container, 1, {
@@ -295,10 +295,10 @@ var Modal = (function() {
       }
       function onStart() {
         body.appendChild(container);
-        container.addEventListener('click', onClick);
+        container.addEventListener("click", onClick);
       }
       function onReverseComplete() {
-        container.removeEventListener('click', onClick);
+        container.removeEventListener("click", onClick);
           body.removeChild(container);
       }
       function open() {
@@ -318,3 +318,4 @@ var Modal = (function() {
       }
     return modal;
   }
+  
