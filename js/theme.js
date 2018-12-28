@@ -25,6 +25,7 @@
             $('.form_hide').on('click',function(){
                 $('.searchForm').removeClass('show')
             });
+            $('.form-control').find( "div" ).css( "color", "red" )
         };
     };
     
@@ -88,12 +89,12 @@
     };
     
     // * Stellar 
-    $(function(){
-        $.stellar({
-            horizontalScrolling: false,
-            verticalOffset: 40
-        });
-    });
+    // $(function(){
+    //     $.stellar({
+    //         horizontalScrolling: false,
+    //         verticalOffset: 40
+    //     });
+    // });
     
      //* counterUp JS
     function counterUp(){
@@ -151,6 +152,6 @@
     counterUp (); 
     counterUp2 ();
     mainNavbar ();
-    preloader ();
+    // preloader ();
     
 })(jQuery);

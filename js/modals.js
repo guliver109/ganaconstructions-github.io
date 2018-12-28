@@ -10,6 +10,12 @@ var Modal = (function() {
     var contentDelay = 400; // duration after you click the button and wait for the content to show
   var len = trigger.length;
 
+  $(".modal__ trigger").on("show", function () {
+    $("body").addClass("modal-open");
+  }).on("hidden", function () {
+    $("body").removeClass("modal-open")
+  });
+
   // make it easier for yourself by not having to type as much to select an element
   function $qsa(el) {
     return document.querySelectorAll(el);
@@ -33,11 +39,6 @@ var Modal = (function() {
   var makeDiv = function(self, modal) {
 
     var fakediv = document.getElementById("modal__temp");
-
-    /**
-     * if there isn"t a "fakediv", create one and append it to the button that was
-     * clicked. after that execute the function "moveTrig" which handles the animations.
-     */
 
     if (fakediv === null) {
       var div = document.createElement("div");
@@ -101,13 +102,6 @@ var Modal = (function() {
       m.classList.add("modal--active");
       // reveal the modal content
       content.classList.add("modal__content--active");
-
-      /**
-       * when the modal content is finished transitioning, fadeout the temporary
-       * expanding div so when the window resizes it isn"t visible ( it doesn"t
-       * move with the window).
-       */
-
       content.addEventListener("transitionend", hideDiv, false);
 
       isOpen = true;
@@ -127,22 +121,11 @@ var Modal = (function() {
 
     var target = event.target;
     var div = document.getElementById("modal__temp");
-
-    /**
-     * make sure the modal__bg or modal__close was clicked, we don"t want to be able to click
-     * inside the modal and have it close.
-     */
-
     if (isOpen && target.classList.contains("modal__bg") || target.classList.contains("modal__close")) {
 
       // make the hidden div visible again and remove the transforms so it scales back to its original size
       div.style.opacity = "1";
       div.removeAttribute("style");
-
-            /**
-            * iterate through the modals and modal contents and triggers to remove their active classes.
-      * remove the inline css from the trigger to move it back into its original position.
-            */
 
             for (var i = 0; i < len; i++) {
                 modals[i].classList.remove("modal--active");
@@ -190,30 +173,6 @@ var Modal = (function() {
 
 Modal.init();
 
-// kontakt modal
-$(function() {
-
-  // contact form animations
-  $("#contact").click(function() {
-    $("#contactForm").fadeToggle();
-    // $(".contactForm-close").fadeOut();
-  })
-  $(document).mouseup(function (e) {
-    var container = $("#contactForm");
-    var closeContainer = $(".closeModal-btn")
-
-    if (!container.is(e.target) // if the target of the click isn"t the container...
-        && container.has(e.target).length === 0) // ... nor a descendant of the container
-    {
-        container.fadeOut();
-    }
-    if (closeContainer.is(e.target)){
-      
-      container.fadeToggle();
-    }
-  });
-});
-
 // Opsirnije modal
 // console.clear();
 
@@ -224,7 +183,9 @@ var openButton = document.querySelector("#open-button");
 openButton.addEventListener("click", function(){
   modal.open();
 });
-function createModal(container){
+
+function createModal(container) {
+  
   var content = container.querySelector(".modal-content");
   var dialog = container.querySelector(".modal-dialog");
   var polygon = container.querySelector(".modal-polygon");
@@ -235,7 +196,7 @@ function createModal(container){
   var point3 = createPoint(55, 55);
   var point4 = createPoint(45, 55);
 
-  var animation = new TimelineMax({
+  var animation = new TimelineMax ({
         onReverseComplete: onReverseComplete,
         onStart: onStart,
         paused: true
@@ -286,35 +247,40 @@ function createModal(container){
       close: close
     };
 
-  body.removeChild(container);
+    body.removeChild(container);
 
-    function onClick() {
-      if (modal.isOpen) {
-        close();
+      function onClick() {
+        if (modal.isOpen) {
+          close();
+        }
       }
-    }
-    function onStart() {
-      body.appendChild(container);
-      container.addEventListener("click", onClick);
-    }
-    function onReverseComplete() {
-      container.removeEventListener("click", onClick);
-        body.removeChild(container);
-    }
-    function open() {
-      modal.isOpen = true;
-      animation.play().timeScale(2);
-    }
-    function close() {
-      modal.isOpen = false;
-      animation.reverse().timeScale(2.5);
-    }
+    
+      function onStart() {
+        body.appendChild(container);
+        container.addEventListener("click", onClick);
+      }
+    
+      function onReverseComplete() {
+        container.removeEventListener("click", onClick);
+          body.removeChild(container);
+      }
+      
+      function open() {
+        modal.isOpen = true;
+        animation.play().timeScale(2);
+      }
+      
+      function close() {
+        modal.isOpen = false;
+        animation.reverse().timeScale(2.5);
+      } 
 
-    function createPoint(x, y) {
-      var point = polygon.points.appendItem(svg.createSVGPoint());
-      point.x = x || 0;
-      point.y = y || 0;
-      return point;
-    }
-  return modal;
+      function createPoint(x, y) {
+        var point = polygon.points.appendItem(svg.createSVGPoint());
+        point.x = x || 0;
+        point.y = y || 0;
+        return point;
+      }
+    return modal;
 }
+
